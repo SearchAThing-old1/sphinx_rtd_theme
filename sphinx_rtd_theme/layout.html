@@ -90,9 +90,17 @@
           {% block sidebartitle %}
 
           {% if logo and theme_logo_only %}
+            {% if not home_link %}
             <a href="{{ pathto(master_doc) }}">
+            {% else %}
+            <a href="{{ home_link }}">
+            {% endif %}
           {% else %}
+            {% if not home_link %}
             <a href="{{ pathto(master_doc) }}" class="icon icon-home"> {{ project }}
+            {% else %}
+            <a href="{{ home_link }}" class="icon icon-home"> {{ project }}            
+            {% endif %}
           {% endif %}
 
           {% if logo %}
