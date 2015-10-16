@@ -200,6 +200,9 @@
 
   {%- block footer %} {% endblock %}
 
+  <script src="{{ pathto('_static/js/util.js', 1) }}"></script>
+  <script type="text/javascript">processPre();</script>
+  
   {% if google_analytics_id %}
   <script>
     if (document.location.href.indexOf("file://") != 0)
